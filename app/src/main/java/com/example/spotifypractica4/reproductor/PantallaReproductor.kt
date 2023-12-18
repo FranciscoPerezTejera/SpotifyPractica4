@@ -6,8 +6,10 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
 import androidx.compose.material3.Slider
 import androidx.compose.material3.Text
@@ -27,10 +29,11 @@ fun PantallaReproductor() {
         verticalArrangement = Arrangement.SpaceBetween){
         Text(text = "Album o título del disco", modifier = Modifier.fillMaxWidth().padding(8.dp))
         Image(painter = painterResource(id = R.drawable.badbunny), contentDescription = "",
-            modifier = Modifier.fillMaxWidth().padding(8.dp).weight(1f))
+            modifier = Modifier.fillMaxWidth().padding(8.dp).size(450.dp))
         Text(text = "Título de la canción", modifier = Modifier.fillMaxWidth().padding(8.dp))
         Slider(value = 0f, onValueChange = {})
-        Row (modifier = Modifier.fillMaxWidth().padding(8.dp).weight(1f)) {
+        Row (horizontalArrangement = Arrangement.SpaceBetween,
+            modifier = Modifier.fillMaxWidth().padding(8.dp)) {
             Button(onClick = { /*TODO*/ }) {}
             Button(onClick = { /*TODO*/ }) {}
             Button(onClick = { /*TODO*/ }) {}
